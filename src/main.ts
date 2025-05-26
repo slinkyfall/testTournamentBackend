@@ -13,7 +13,10 @@ async function bootstrap() {
     
     // Configuración de CORS
     app.enableCors({
-      origin: 'http://localhost:4200', // URL de tu frontend Angular
+      origin: [
+        'http://localhost:4200', // URL de tu frontend Angular
+        'https://slinkyfall.github.io'
+      ],
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
       credentials: true,
       allowedHeaders: 'Content-Type,Accept,Authorization',
